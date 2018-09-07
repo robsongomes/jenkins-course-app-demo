@@ -23,6 +23,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<version.number>${git.commit.time}.${git.commit.id.abbrev}</version.number>
+		<docker.repository.name>robsongomes/${project.artifactId}</docker.repository.name>
 	</properties>
 
 	<dependencies>
