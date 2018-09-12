@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        docker { image '3.5-jdk-8-alpine' }
-    }
+    agent none
 
     stages {
         stage('clone') {
@@ -9,7 +7,12 @@ pipeline {
         }
         
         stage('compile') {
-            sh './mvnw clean package -DskipTests'
+            agent {
+                docker { image '3.5-jdk-8-alpine' }
+            }
+            steps {
+                sh './mvnw clean package -DskipTests'
+            }
         }
     }
 }
