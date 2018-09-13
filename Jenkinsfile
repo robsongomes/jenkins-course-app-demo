@@ -5,7 +5,7 @@ pipeline {
         
         stage('compile') {
             agent {
-                docker { image 'maven:jdk-8-alpine' }
+                docker { image 'maven:3.5-jdk-8-alpine' }
             }
             steps {
                 sh './mvnw clean package -DskipTests'
