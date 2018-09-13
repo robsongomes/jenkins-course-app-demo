@@ -2,9 +2,6 @@ pipeline {
     agent none
 
     stages {
-        stage('clone') {
-            git 'https://github.com/robsongomes/jenkins-course-app-demo.git'
-        }
         
         stage('compile') {
             agent {
